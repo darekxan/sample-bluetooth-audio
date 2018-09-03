@@ -15,6 +15,7 @@
  */
 
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 27
@@ -36,4 +37,12 @@ android {
 dependencies {
     compileOnly 'com.google.android.things:androidthings:1.0'
     implementation 'com.google.android.things.contrib:driver-button:1.0'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+}
+repositories {
+    maven {
+        url 'http://dl.bintray.com/kotlin/kotlin-eap'
+    }
+    mavenCentral()
 }
